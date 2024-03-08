@@ -1,0 +1,18 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.outsideHouse {
+    position: absolute; 
+    bottom : 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(0); /*이미지 원래 위치 조정*/
+    transition: opacity 1s ease, transform 6s ease; /* 애니메이션 시간 */
+}
+
+.outsideHouse.show {
+    opacity: 1; /* 이미지 표시 */
+    transform: translateX(-50%) translateY(17%) scale(1.1); /* 애니메이션 적용 */
+}
