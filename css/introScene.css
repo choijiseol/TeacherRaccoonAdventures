@@ -9,7 +9,7 @@ html, body {
     bottom : 0;
     left: 50%;
     transform: translateX(-50%) translateY(0); /*이미지 원래 위치 조정*/
-    transition: opacity 1s ease, transform 6s ease; /* 애니메이션 시간 */
+    transition: opacity 1s ease, transform 4.6s ease; /* 애니메이션 시간 */
 }
 
 .outsideHouse.show {
