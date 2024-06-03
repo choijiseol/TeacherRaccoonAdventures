@@ -10,4 +10,12 @@ setTimeout(function() {
     image.style.width = '91%'; 
     image.style.height = 'auto'; 
 
-}, 4100); 
+}, 4000); 
+
+setTimeout(function() {
+    var image = document.getElementById('house');
+    image.src = './img/introSceneImg/intro_insideHouse2.png'; 
+    image.style.width = '91%'; 
+    image.style.height = 'auto'; 
+
+}, 6000); 
