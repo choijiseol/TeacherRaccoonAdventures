@@ -18,7 +18,7 @@ function typeWriter(element, text, speed) {
 }
 
 setTimeout(function () {
-    var image = document.getElementById('house');
+    var image = document.getElementById('imageDiv');
     var dialogue = document.getElementById('dialogue');
     image.src = './img/introSceneImg/intro_insideHouse1.png';
     image.style.width = '91%';
@@ -32,10 +32,19 @@ setTimeout(function () {
 }, 5000);
 
 setTimeout(function () {
-    var image = document.getElementById('house');
+    var image = document.getElementById('imageDiv');
     var dialogue = document.getElementById('dialogue');
     image.src = './img/introSceneImg/intro_insideHouse2.png';
     image.style.width = '91%';
     image.style.height = 'auto';
     typeWriter(dialogue, '음...티비에서 뭐 하려나', 50);
 }, 10000);
+
+setTimeout(function () {
+    var image = document.getElementById('imageDiv');
+    var dialogue = document.getElementById('dialogue');
+    image.src = './img/introSceneImg/intro_viewTv1.png';
+    image.style.width = '91%';
+    image.style.height = 'auto';
+    typeWriter(dialogue, '오~ 홈쇼핑 원피스 이쁘다', 50);
+}, 12000);
