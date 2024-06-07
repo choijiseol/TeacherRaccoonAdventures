@@ -68,17 +68,21 @@ setTimeout(function () {
         { text: '먼저 필요한 짐부터 싸야겠당', speed: 100 }
     ];
 
-    //하나씩 나타나게
+    // 하나씩 나타나게
     function typeNextText(index) {
         if (index < texts.length) {
             typeWriter(dialogue, texts[index].text, texts[index].speed, function() {
                 setTimeout(function() {
                     typeNextText(index + 1); 
-                }, 1000); // 테스트 간의 초 간격
+                }, 1000); // 텍스트 간의 초 간격
             });
+        } else {
+            // 마지막 텍스트 후 다음페이지로
+            setTimeout(function() {
+                window.location.href = 'introScenePackingBag.html';
+            }, 1500); 
         }
     }
 
-    // Start typing the first text
     typeNextText(0);
 }, 14000);
