@@ -80,7 +80,7 @@ setTimeout(function () {
             // 마지막 텍스트 후 다음페이지로
             setTimeout(function() {
                 window.location.href = 'introScenePackingBag.html';
-            }, 1500); 
+            }, 1000); 
         }
     }
 
