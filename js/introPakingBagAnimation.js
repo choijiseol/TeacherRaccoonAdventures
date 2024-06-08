@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     localStorage.removeItem('selectedItems');  // localhost 값 지우기
 
     var items = document.querySelectorAll('.itemDiv img');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var mainExplanation = document.querySelector('.mainExplanation');
     var subExplanation = document.querySelector('.subExplanation');
 
-    selectedItems.forEach(function(id) {
+    selectedItems.forEach(function (id) {
         var item = document.getElementById(id);
         if (item) {
             item.style.transform = 'scale(1)';
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    items.forEach(function(item) {
-        item.addEventListener('click', function() {
+    items.forEach(function (item) {
+        item.addEventListener('click', function () {
             if (!this.classList.contains('clicked') && selectedItems.length < 3) {
                 this.style.transform = 'scale(1.5)';
                 this.classList.add('clicked');
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     subExplanation.textContent = ' ';
 
                     // 다음 페이지로 이동
-                    setTimeout(function() {
+                    setTimeout(function () {
                         window.location.href = 'introSceneGoHarbor.html';
-                    }, 1200);
+                    }, 2000); // 1초 후에 페이지 이동
                 }
             }
         });
