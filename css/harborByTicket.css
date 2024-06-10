@@ -5,10 +5,24 @@ body {
     overflow: hidden;
 }
 
-.woodBackground {
+.harborGround,
+.harborSky {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 50%;
     width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.harborSky {
+    z-index: 0;
+}
+
+.harborGround {
     z-index: 1;
 }
 
@@ -38,8 +52,8 @@ body {
     font-weight: 700;
 }
 
-/* 아이템 구역 */
-.itemSelect {
+/* 티켓 구역 */
+.ticketSelect {
     position: absolute;
     top: 170px;
     left: 50%;
@@ -48,60 +62,43 @@ body {
     height: 70%;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2px;
 }
 
-.itemDiv {
+.ticketDiv {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.itemDiv img {
-    transition: transform 0.4s ease-in-out; /* Add transition for smooth scaling */
+.ticketDiv img {
+    transition: transform 0.4s ease-in-out;
 }
 
-/* 아이템 css */
-.itemUmbrella {
-    margin-left: 60px;
-    height: 220px;
-    width: auto;
-    transform: rotate(-30deg); 
+/* 이미지를 클릭했을 때 확대하는 스타일 */
+.ticketDiv img.active {
+    transform: scale(1.2);
 }
 
-.itemLighter {
-    margin-bottom: 40px;
-    height: 170px;
-    width: auto;
-    transform: rotate(10deg); 
-}
-
-.itemWater {
-    height: 220px;
-    width: auto;
-    transform: rotate(15deg); 
-}
-
-.itemHandkerchief {
-    margin-bottom: 50px;
-    margin-left: 30px;
+/* 티켓 css */
+.ticket1 {
     height: 170px;
     width: auto;
 }
 
-.itemEarphone {
-    margin-top: 30px;
-    margin-right: 40px;
-    height: 150px;
+.ticket2 {
+    height: 170px;
     width: auto;
-    transform: rotate(-30deg); 
 }
 
-.itemLoop {
-    margin-top: 30px;
-    margin-right: 70px;
+.ticket3 {
+    height: 170px;
+    width: auto;
+}
+
+.ticket4 {
     height: 170px;
     width: auto;
 }

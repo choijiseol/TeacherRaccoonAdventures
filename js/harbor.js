@@ -60,8 +60,8 @@ window.onload = function () {
             } else {
                 // 다음 페이지로 이동
                 setTimeout(function() {
-                    // window.location.href = 'introScenePackingBag.html';
-                }, 1000); 
+                    window.location.href = 'introSceneHarborByTicket.html';
+                }, 500); 
             }
         }
 
