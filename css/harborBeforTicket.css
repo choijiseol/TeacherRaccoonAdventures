@@ -101,3 +101,8 @@ body {
     height: 600px;
     max-width: 100%;
 }
+
+.fade-out {
+    transition: opacity 1s;
+    opacity: 0;
+}

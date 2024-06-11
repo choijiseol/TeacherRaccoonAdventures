@@ -26,7 +26,7 @@ window.onload = function () {
         var texts = [
             { text: '표를 구매하셨으면 이제 배가 오니까 기다려주세요!', speed: 100 ,character: '오리선장' },
             { text: '. . .', speed: 620 ,character: '너구리선생' },
-            { text: '오! 왔다!', speed: 60,character: '너구리선생'  },
+            { text: '오! 왔다!', speed: 60, character: '너구리선생' },
             { text: '저 배를 타고 이제 여행을 떠나는거야!', speed: 110, character: '너구리선생' },
         ];
 
@@ -46,14 +46,32 @@ window.onload = function () {
                     }, 1000); // 텍스트 간의 간격
                 });
             } else {
-                // 다음 페이지로 이동
+                // 다이얼로그, 캐릭터 안보이게
                 setTimeout(function() {
-                    // window.location.href = 'introSceneHarborByTicket.html';
+                    // 캐릭터 페이드 아웃
+                    characterCaptain.classList.add('fade-out');
+                    characterRaccon.classList.add('fade-out');
+                    dialogue.classList.add('fade-out');
+                    dialogueCharacter.classList.add('fade-out');
+
+                    // 1초 후에 캐릭터, 다이얼로그 숨김
+                    setTimeout(function() {
+                        characterCaptain.style.display = 'none';
+                        characterRaccon.style.display = 'none';
+                        dialogue.style.display = 'none';
+                        dialogueCharacter.style.display = 'none';
+
+                        // 배가 다시 출발
+                        setTimeout(function() {
+                            animateShipToLeft(ship);
+                        }, 800);
+                    }, 1000); // 1초 후
                 }, 800); 
             }
         }
 
-        function animateShipToCenter(ship) {
+        // 배 애니메이션
+        function animateShipToCenter(ship, callback) {
             let currentLeft = 110; 
             const interval = setInterval(function() {
                 if (currentLeft > 50) { // 중앙 도달
@@ -61,10 +79,23 @@ window.onload = function () {
                     ship.style.left = currentLeft + '%';
                 } else {
                     clearInterval(interval); // 정지
+                    if (callback) callback();
                 }
             }, 30); // 
         }
 
+        function animateShipToLeft(ship) {
+            let currentLeft = 50; 
+            const interval = setInterval(function() {
+                if (currentLeft > -40) { // 화면 바깥으로 
+                    currentLeft -= 0.5; // 0.5% 이동
+                    ship.style.left = currentLeft + '%';
+                } else {
+                    clearInterval(interval); // 정지
+                }
+            }, 30); 
+        }
+
         typeNextText(0);
-    }, 1); // 수정된 지연 시간
+    }, 1);
 };
