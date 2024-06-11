@@ -92,6 +92,7 @@ window.onload = function () {
                     ship.style.left = currentLeft + '%';
                 } else {
                     clearInterval(interval); // 정지
+                    window.location.href = 'secondMarket.html';
                 }
             }, 30); 
         }
