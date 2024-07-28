@@ -18,7 +18,7 @@ body {
 
 .black-move-content {
     position: absolute;
-    width: 57%;
+    width: 55%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
