@@ -1,3 +1,10 @@
+//  배경음악
+document.getElementById('soundButton').addEventListener('click', function() {
+    var audio = document.getElementById('introMusic');
+    audio.play();
+    document.getElementById('overlay').style.display = 'none';
+});
+
  // 배경화면 커지는 애니메이션
  window.onload = function() {
     resetBackgroundSize();
