@@ -1,29 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <title>너구리선생의 모험</title>
-</head>
-
-<body>
-    <img src="./img/homeImg/homeTitle.png" class="homeTitle">
-    <img src="./img/homeImg/homeBackground.png" class="homeBackground">
-
-    <button class="startButton" onClick="location.href='introScene.html'">
-        <img src="./img/homeImg/homeStartButton.png" class="startButtonBackground">
-    </button>
-
-    <div class="soundInfo">버튼 누르면 배경음악이 나와요.</div>
-    <button class="soundButton" id="soundButton">
-        <img src="./img/volume.png" class="soundIcon">
-    </button>
-
-    <audio id="introMusic" src="./sound/intro1.mp3" loop></audio>
-
-    <script src="js/homeBackground.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
